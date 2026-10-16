@@ -1,0 +1,66 @@
+/* TenPin Notes のサポート・プライバシーポリシーのページ（アプリのスタンダードのデザインの色） */
+:root {
+  --bg: #F3F0EA;
+  --surface: #FFFFFF;
+  --border: #DCD5C8;
+  --ink: #1C1B19;
+  --ink-muted: #6E6A62;
+  --accent: #B3261E;
+  --accent-soft: #F4E4E2;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #161513;
+    --surface: #211F1C;
+    --border: #3A3631;
+    --ink: #F1EDE6;
+    --ink-muted: #A8A196;
+    --accent: #F0645A;
+    --accent-soft: #3A221F;
+  }
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-text-size-adjust: 100%;
+}
+main { max-width: 720px; margin: 0 auto; padding: 32px 16px 64px; }
+
+header { margin-bottom: 24px; }
+.app { margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; color: var(--accent); }
+h1 { margin: 4px 0 8px; font-size: 28px; line-height: 1.3; }
+.lead { margin: 0; color: var(--ink-muted); }
+
+h2 { margin: 36px 0 12px; font-size: 19px; line-height: 1.4; }
+h3 { margin: 0 0 6px; font-size: 16px; line-height: 1.5; }
+p { margin: 0 0 12px; }
+ul, ol { margin: 0 0 12px; padding-left: 1.4em; }
+li { margin-bottom: 4px; }
+a { color: var(--accent); }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+.card > :last-child { margin-bottom: 0; }
+.contact { background: var(--accent-soft); border-color: transparent; }
+.mail { font-size: 18px; font-weight: 700; word-break: break-all; }
+.note { font-size: 14px; color: var(--ink-muted); }
+
+footer {
+  margin-top: 48px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  font-size: 14px;
+  color: var(--ink-muted);
+}
+footer a { margin-right: 16px; }
